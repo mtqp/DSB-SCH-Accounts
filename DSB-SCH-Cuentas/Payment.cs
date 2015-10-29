@@ -109,7 +109,7 @@ namespace Accounts
             if(this.method is CreditCard)
             {
                 int monthDiff = DifferenceInMonths(forDate);
-                return monthDiff < dues;
+                return 0 <= monthDiff && monthDiff < dues;
             }
 
             //Else this is a cash payment

@@ -48,16 +48,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="enfoke.Framework">
-      <HintPath>..\..\..\framework4\bin\enfoke.Framework.dll</HintPath>
+      <HintPath>..\..\..\Program Files\enfoke\framework4\bin\enfoke.Framework.dll</HintPath>
     </Reference>
     <Reference Include="enfoke.OOPS">
-      <HintPath>..\..\..\framework4\bin\enfoke.OOPS.dll</HintPath>
+      <HintPath>..\..\..\Program Files\enfoke\framework4\bin\enfoke.OOPS.dll</HintPath>
     </Reference>
     <Reference Include="enfoke.UI.Settings">
-      <HintPath>..\..\..\framework4\bin\enfoke.UI.Settings.dll</HintPath>
+      <HintPath>..\..\..\Program Files\enfoke\framework4\bin\enfoke.UI.Settings.dll</HintPath>
     </Reference>
     <Reference Include="enfoke.Windows.Forms">
-      <HintPath>..\..\..\framework4\bin\enfoke.Windows.Forms.dll</HintPath>
+      <HintPath>..\..\..\Program Files\enfoke\framework4\bin\enfoke.Windows.Forms.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Private>True</Private>
@@ -120,25 +120,6 @@
     <Compile Include="PaymentMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ErrorMessage.resx">
-      <DependentUpon>ErrorMessage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAccounts.resx">
-      <DependentUpon>frmAccounts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmNewPayment.resx">
-      <DependentUpon>frmNewPayment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -171,6 +152,14 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAccounts.resx">
+      <DependentUpon>frmAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewPayment.resx">
+      <DependentUpon>frmNewPayment.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

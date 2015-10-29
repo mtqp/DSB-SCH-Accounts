@@ -69,6 +69,7 @@ namespace Accounts
                 lvi.SubItems.Add(payment.Concept);
                 lvi.SubItems.Add(payment.Due(forDate: SelectedDate()));
                 lvi.SubItems.Add(payment.DueAmount().ToString());
+                lvi.SubItems.Add(payment.EntryDate.ToYearMonthDayString());
                 lvi.Tag = payment;
                 
                 slv.Items.Add(lvi);

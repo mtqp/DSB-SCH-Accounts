@@ -29,6 +29,7 @@ namespace Accounts
         /// </summary>
         private void InitializeComponent()
         {
+            enfoke.Windows.Forms.ListViewColumnSorter listViewColumnSorter1 = new enfoke.Windows.Forms.ListViewColumnSorter();
             this.slv = new enfoke.Windows.Forms.SuperListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -46,6 +47,7 @@ namespace Accounts
             this.label3 = new System.Windows.Forms.Label();
             this.lblToPay = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.monthUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yearUpDown)).BeginInit();
@@ -62,13 +64,21 @@ namespace Accounts
             this.columnHeader1,
             this.columnHeader4,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader5});
             this.slv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.slv.Extender = null;
             this.slv.GridLines = false;
             this.slv.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Clickable;
             this.slv.IsLayoutBound = false;
-            this.slv.ListViewItemSorter = null;
+            listViewColumnSorter1.Order = System.Windows.Forms.SortOrder.Ascending;
+            listViewColumnSorter1.Orders = new System.Windows.Forms.SortOrder[] {
+        System.Windows.Forms.SortOrder.Ascending};
+            listViewColumnSorter1.SortColumn = 3;
+            listViewColumnSorter1.SortColumns = new int[] {
+        3};
+            this.slv.ItemSorter = listViewColumnSorter1;
+            this.slv.ListViewItemSorter = listViewColumnSorter1;
             this.slv.Location = new System.Drawing.Point(0, 0);
             this.slv.MaxRows = -1;
             this.slv.MultiSelect = false;
@@ -101,7 +111,7 @@ namespace Accounts
             // columnHeader3
             // 
             this.columnHeader3.Text = "Monto";
-            this.columnHeader3.Width = 501;
+            this.columnHeader3.Width = 100;
             // 
             // panel1
             // 
@@ -241,6 +251,11 @@ namespace Accounts
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Fecha Ingreso";
+            this.columnHeader5.Width = 100;
+            // 
             // frmAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +304,7 @@ namespace Accounts
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Label lblToPay;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
 
